@@ -12,7 +12,7 @@ ln -sf /run /var/run
 
 # add some packages present in Fedora CoreOS but not CentOS bootc
 dnf -y install --setopt=install_weak_deps=False \
-  NetworkManager-team \
+  NetworkManager \
   afterburn \
   afterburn-dracut \
   audit \
@@ -27,17 +27,13 @@ dnf -y install --setopt=install_weak_deps=False \
   ipcalc \
   iscsi-initiator-utils \
   nfs-utils-coreos \
-  runc \
   rsync \
   ssh-key-dir \
-  wireguard-tools
+  wireguard-tools \
+  bootupd
 
 # remove some packages present in CentOS bootc but not Fedora CoreOS
-dnf -y remove \
-  gssproxy \
-  nfs-utils \
-  quota \
-  quota-nls
+
 
 # apply CoreOS overlays
 cd /tmp/

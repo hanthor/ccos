@@ -1,4 +1,4 @@
-ARG MAJOR_VERSION="${MAJOR_VERSION:-stream9}"
+ARG MAJOR_VERSION="${MAJOR_VERSION:-latest}"
 
 FROM quay.io/centos-bootc/centos-bootc:$MAJOR_VERSION
 
